@@ -1,0 +1,22 @@
+//Mel-c Miranda C.
+//Fecha: 30/04/2023
+
+#include <Servo.h>  // Incluímos la librería para poder controlar el servo
+Servo myservo;      // Declaramos la variable para controlar el servo
+int tiempo = 100;   // tiempo de velocidad entre 0 y 100
+void setup() {
+  myservo.attach(9);  // Iniciamos el monitor serie para mostrar el resultado y el pin al que esta conectado al arduino
+}
+
+void loop() {
+  myservo.write(0);   //angulo de 0°
+  delay(tiempo);       // tiempo que tomara para moverse
+  myservo.write(90);  //angulo de 90°
+  delay(tiempo);    
+  myservo.write(180);  //angulo de 180°
+  delay(tiempo);
+  myservo.write(90);  //angulo de 90°
+  delay(tiempo);
+  myservo.write(0);   //angulo de 0°
+  delay(tiempo);
+}
